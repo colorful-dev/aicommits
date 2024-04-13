@@ -9,7 +9,7 @@ export default testSuite(({ describe }) => {
 		const configPath = path.join(fixture.path, '.aicommits');
 		const openAiToken = 'OPENAI_KEY=sk-abc';
 
-		test('set unknown config file', async () => {
+		await test('set unknown config file', async () => {
 			const { stderr } = await aicommits(['config', 'set', 'UNKNOWN=1'], {
 				reject: false,
 			});
@@ -17,7 +17,7 @@ export default testSuite(({ describe }) => {
 			expect(stderr).toMatch('Invalid config property: UNKNOWN');
 		});
 
-		test('set invalid OPENAI_KEY', async () => {
+		await test('set invalid OPENAI_KEY', async () => {
 			const { stderr } = await aicommits(['config', 'set', 'OPENAI_KEY=abc'], {
 				reject: false,
 			});
