@@ -28,7 +28,7 @@ const httpsPost = async (
 		data: string;
 	}>((resolve, reject) => {
 		const postContent = JSON.stringify(json);
-		var connector = https;
+		let connector: typeof import("http") | typeof import("https") = https;
 		if (url.protocol != 'https') {
 			connector = http;
 		}

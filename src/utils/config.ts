@@ -116,7 +116,7 @@ const configParsers = {
 	},
 	OPENAI_URL(url?: string) {
 		if (!url || url.length === 0) {
-			return undefined;
+			return 'https://api.openai.com';
 		}
 
 		parseAssert('OPENAI_URL', /^https?:\/\//.test(url), 'Must be a valid URL');
