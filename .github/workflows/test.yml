@@ -40,9 +40,10 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get install tinyproxy
-          tinyproxy
+          A
       - name: Test
         env:
+          OPENAI_URL: ${{ secrets.OPENAI_URL }}
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
         run: |
           pnpm test
