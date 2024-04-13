@@ -1,5 +1,5 @@
 {
-	"name": "aicommits",
+	"name": "@colorful-dev/aicommits",
 	"version": "0.0.0-semantic-release",
 	"description": "Writes your git commit messages for you with AI",
 	"keywords": [
@@ -8,7 +8,10 @@
 		"commit"
 	],
 	"license": "MIT",
-	"repository": "Nutlope/aicommits",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/colorful-dev/aicommits.git"
+	  },
 	"author": "Hassan El Mghari (@nutlope)",
 	"type": "module",
 	"files": [
@@ -50,5 +53,8 @@
 		"branches": [
 			"main"
 		]
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
 	}
 }
