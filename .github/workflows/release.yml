@@ -1,8 +1,9 @@
 name: Release
 
 on:
-  push:
-    branches: [main]
+  release:
+    types: [created]
+
 
 jobs:
   release:
@@ -27,7 +28,6 @@ jobs:
       - name: Typecheck
         run: pnpm run type-check
 
-      - name: Release
+      - run: pnpm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm dlx semantic-release
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
