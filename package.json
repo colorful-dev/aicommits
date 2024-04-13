@@ -1,5 +1,5 @@
 {
-	"name": "@colorful-dev/aicommits",
+	"name": "@croatialu/aicommits",
 	"version": "0.0.1-beta.3",
 	"description": "Writes your git commit messages for you with AI",
 	"packageManager": "pnpm@8.15.6",
