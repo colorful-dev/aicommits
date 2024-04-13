@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/colorful-dev/aicommits.git"
+		"url": "git+https://github.com/croatialu/aicommits.git"
 	},
 	"author": "Hassan El Mghari (@nutlope)",
 	"type": "module",
